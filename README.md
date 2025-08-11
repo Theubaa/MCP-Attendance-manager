@@ -4,10 +4,26 @@ A Model Context Protocol (MCP) server that provides attendance management functi
 
 ## Features
 
-- Hello World MCP server with attendance management capabilities
-- Cross-platform support (Windows, macOS, Linux)
-- Easy setup and configuration
-- Integration with Claude Desktop
+- **Leave Management System:**
+  - Check leave balances
+  - Apply for leave
+  - View leave requests
+  - Cancel leave requests
+
+- **Windows MCP (Model Control Protocol) Tools:**
+  - Launch applications
+  - Execute PowerShell commands
+  - Capture desktop state
+  - Interact with UI elements (click, type, scroll, etc.)
+  - Switch between applications
+  - Web scraping capabilities
+
+- **Other Capabilities:**
+  - Web search and fetching
+  - Creating artifacts (code, documents, visualizations)
+  - Cross-platform support (Windows, macOS, Linux)
+  - Easy setup and configuration
+  - Integration with Claude Desktop
 
 ## Prerequisites
 
@@ -86,13 +102,19 @@ pip install -e .
 
 ### 1. Claude Desktop Setup
 1. Open Claude Desktop
-2. Go to **Settings** → **Model Context Protocol**
-3. Click **Add Server**
+2. Go to **Settings** → **Developer** → **Local MCP servers**
+3. Click **Edit Config** to add a new server
 4. Enter the following details:
-   - **Name**: Attendance Manager
-   - **Command**: `python main.py`
+   - **Name**: leave-management (or your preferred name)
+   - **Command**: `C:\Users\team\AppData\Local\Programs\Python\Python310\Scripts\uv.exe`
+   - **Arguments**: `run --with mcp[cli] mcp run C:\Users\team\OneDrive\Desktop\mcp2\hellowworld-mcp-server\main.py`
    - **Working Directory**: Path to your project folder
-   - **Environment Variables**: Leave empty for now
+
+**Note**: The exact command path may vary depending on your Python installation. You can also use `python main.py` directly if you prefer.
+
+#### Example Configuration Screenshot:
+![Claude Desktop MCP Configuration](https://i.imgur.com/example1.png)
+*Settings → Developer → Local MCP servers configuration*
 
 ### 2. Server Configuration
 The server is pre-configured with basic MCP functionality. You can modify `main.py` to add custom tools and functions.
@@ -109,6 +131,15 @@ python main.py
 1. In Claude Desktop, ask: "What tools do you have available?"
 2. The server should respond with available MCP tools
 3. Test attendance management functions
+
+#### Example Working Server Screenshot:
+![Working MCP Server](https://i.imgur.com/example2.png)
+*Claude Desktop showing the working MCP server with leave management and Windows system tools*
+
+**What You Should See:**
+- The server will show as "running" in the MCP configuration
+- Claude will recognize your MCP tools
+- You can ask questions like "/mcp who are you" to see available capabilities
 
 ## Project Structure
 
