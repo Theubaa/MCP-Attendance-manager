@@ -113,7 +113,8 @@ pip install -e .
 **Note**: The exact command path may vary depending on your Python installation. You can also use `python main.py` directly if you prefer.
 
 #### Example Configuration Screenshot:
-![Claude Desktop MCP Configuration](https://i.imgur.com/example1.png)
+![Claude Desktop MCP Configuration](<img width="1373" height="881" alt="image" src="https://github.com/user-attachments/assets/6def781e-9bcd-425e-ba64-4256ca0b8e8a" />
+)
 *Settings → Developer → Local MCP servers configuration*
 
 ### 2. Server Configuration
